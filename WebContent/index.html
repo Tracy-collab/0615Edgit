@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+</head>
+<body bgcolor="pink">
+		<!-- 
+				action: 提交的url地址。
+					路径：  http://ip+端口号/xxxx(关注)
+					相对路径：  不以/开头的路径是相对路径。
+						相对的是当前资源的父路径。
+							index.html:  /Javaweb_Day01/index.html
+							
+							
+							
+							http://localhost:8080/Javaweb_Day01/abc
+					绝对路径： 以/开头的路径是相对路径。
+							/Javaweb_Day01/index.html
+							
+					绝对路径在解析时，会发生变化。
+						如果是浏览器解析绝对路径，它会将/解析为http://localhost:8080/
+								需要手动加上项目名
+						如果是服务器解析绝对路径，它会将/解析为http://localhost:8080/项目名/
+								在Java程序代码内部，解析/
+					
+				method: 提交的请求方式（方法），默认为get。
+				
+				http规定的请求方式有九种：
+					POST,GET,HAED,DELETE,PUT....
+				表单中只会使用post,get(默认)；
+				<a>在点击时，默认只发get。
+				
+				GET请求，将请求参数附加在url的后边。
+							不安全；浏览器的url地址栏有长度限制（255）,参数过多可能会丢失
+				POST请求，将请求参数放入请求体中。
+				
+			浏览器和服务器都使用HTTP协议（约定）进行通信。HTTP协议最终体现在HTTP报文中。
+				请求报文：   浏览器向服务器发送的消息
+				响应报文：   服务器向浏览器发送的消息
+				
+				报文格式：    报文首行        （书写http协议的版本，请求的url路径等信息）
+						报文头（Headers）    以key-value形式呈现，放报文的一些属性信息
+										例如： 报文内容类型，当前浏览器的型号
+						
+						报文体（Body）     只有post请求有报文体，用于存放请求参数
+						
+			查看： chrome 按 F12
+				
+		 -->
+		<h1>欢迎登录</h1>
+		<form action="abc" method="get">
+				用户名称：<input name="username" /><br>
+				用户密码：<input name="password" /><br>
+				<input type="submit" value="提交">
+		</form>
+
+</body>
+</html>
